@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/dice.css">
+        <link rel="stylesheet" href="./css/scoretable.css">
+        <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script src="./js/script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="nameContainer">
+        <h4 class="nameHeader currentNameHeader hidden" id="name1">Player: ?????</h4>
+        <h4 class="nameHeader hidden" id="name2">Player: ?????</h4>
+    </div>
+    <div class="alignCenter">
+        <div class="header">
+            <h1 class="pig">PIG</h1>
+            <p class="theDiceGame">- the dice game -</p>
+        </div>
+        <div class="scoreContainer hidden">
+            <div class="scoreTable" id="scoreTable">
+                <h4>Scoretable</h4>
+                <p class="score" id="scorePl1">Player 1</p>
+                <p class="score hidden" id="scorePl2">Player 2</p>
+            </div>
+        </div>
+    </div>
+    <form id="numPlayerForm">
+        <p class="formElement">Number of players</p>
+        <button class="nameButton" id="onePlayerBtn">1 player</button>
+        <button class="nameButton" id="twoPlayerBtn">2 player</button>
+    </form>
+    
+    <form class="hidden" id="form1">
+        <p class="formElement" id="enterNamePlayer1">Please enter your name</p>
+        <input class="nameInput" id="nameForm1" type="text" required>
+        <button class="nameButton" id="btnForm1">Submit</button>
+    </form>
+    <form class="hidden" id="form2">
+        <p class="formElement">Please enter your name Player2</p>
+        <input class="nameInput" id="nameForm2" type="text" required>
+    </br></br></br>
+    <button class="nameButton" id="btnForm2">Add both players</button>
+</form>
+<div class="diceContainer hidden">
+        <div class="roundPoints" id="roundScore">Round Points 0</div>
+        <section id="clickable">
+            <div class="die one" id="die-1">
+                <div></div>
+            </div>
+            <div class="die two hidden" id="die-2">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="die three hidden" id="die-3">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="die four hidden" id="die-4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="die five hidden" id="die-5">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="die six hidden" id="die-6">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+    </div>
+    <div class="saveContainer hidden" id="saveBtn">
+        <div class="save">SAVE</div>
+    </div>
+</body>
+</html>

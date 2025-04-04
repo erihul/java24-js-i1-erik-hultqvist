@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+/* @font-face {
+    font-family: 'score-board';
+    src: url('../resources/fonts/ErbosDraco1StNbpRegular-99V5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  } */
+body{
+    padding: 5%;
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; */
+    background-color: pink;
+}
+.hidden {
+    display: none !important;
+}
+.header {
+    text-align: center;
+}
+.nameContainer {
+    position: absolute;
+}
+.nameHeader{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.currentNameHeader {
+    font-size: 30px;
+    color: darkcyan;
+}
+.pig {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 100px;
+    color: lightgoldenrodyellow;
+}
+.theDiceGame {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 70px;
+}
+form {
+    text-align: center;
+}
+.formElement {
+    margin: 20px;
+    font-family: monospace;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+.nameInput {
+    /* width: 200px; */
+    /* height: 40px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-size: 25px; */
+    font-weight: lighter;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 5px;
+}
+.nameButton {
+    background-color: lightseagreen;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    /* height: 40px; */
+    /* width: 58px; */
+    transition-duration: 0.4s;
+    padding: 5px 15px;
+}
+
+.nameButton, .nameInput{
+    font-size: 24px;
+    
+}
+
+.nameButton:hover {
+    background-color: rgb(21, 116, 111);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    /* height: 40px;
+    width: 58px; */
+}
+.alignCenter {
+    text-align: center;
+}
+.diceContainer {
+    display: flex;
+    /* left: 50%; */
+}
+.saveContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.save {
+    background-color: rgb(160, 245, 245);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 0.5%;
+    width: 8%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    cursor: pointer;
+}
+.save:hover{
+    background-color: rgb(3, 205, 205);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
