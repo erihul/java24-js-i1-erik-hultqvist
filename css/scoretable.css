@@ -1,36 +1,61 @@
 .scoreContainer {
     position: absolute;
-    right: 2%;
-    top: 20%;
+    right: 8%;
+    top: 17%;
 }
 .scoreTable {
     padding: 5%;
     background-color: lightgoldenrodyellow;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: monospace;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 3px;
     width: 300px;
     height: 450px;
 }
 .score {
+    font-family: "Jersey 20 Charted", sans-serif;   
     text-align: left;
     padding: 3%;
+    font-size: 45px;
+    margin-top: 10px;
+}
+.rounds {
+    font-family: "Jersey 20 Charted", sans-serif;   
+    text-align: left;
+    padding: 3%;
+    font-size: 30px;
 }
 .roundPoints {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 8px solid lightgoldenrodyellow;
+    border: 2px solid lightgoldenrodyellow;
     border-radius: 1px;
-    background-color: darkcyan;
-    color: white;
+    color: black;
     width: 20%;
     height: 100px;
     margin-right: 15%;
     margin-left: 7%;
-    margin-top: 6%;
+    margin-top: 7%;
     padding: 1%;
     align-content: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 900;
-    font-size: 25px;
+    font-family: "Jersey 20 Charted", sans-serif;
+    font-size: 37px;
+}
+.mini-die {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 8px;
+    cursor: default;
+}
+.mini-die div {
+    width: 20%;
+}
+.dice-history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-left: 7%;
+    margin-top: -50px;
+    max-width: 20%;
 }

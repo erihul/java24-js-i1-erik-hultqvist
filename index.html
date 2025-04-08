@@ -6,14 +6,18 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/dice.css">
         <link rel="stylesheet" href="./css/scoretable.css">
+
         <link rel="shortcut icon" href="#" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+20+Charted&display=swap" rel="stylesheet">
     <script src="./js/script.js" defer></script>
-    <title>Document</title>
+    <title>Pig - The Dice Game</title>
 </head>
 <body>
     <div class="nameContainer">
-        <h4 class="nameHeader currentNameHeader hidden" id="name1">Player: ?????</h4>
-        <h4 class="nameHeader hidden" id="name2">Player: ?????</h4>
+            <h4 class="nameHeader currentNameHeader hidden" id="name1">Player: ?????</h4>
+            <h4 class="nameHeader hidden" id="name2">Player: ?????</h4>
     </div>
     <div class="alignCenter">
         <div class="header">
@@ -22,9 +26,11 @@
         </div>
         <div class="scoreContainer hidden">
             <div class="scoreTable" id="scoreTable">
-                <h4>Scoretable</h4>
-                <p class="score" id="scorePl1">Player 1</p>
-                <p class="score hidden" id="scorePl2">Player 2</p>
+                <h4>SCORETABLE</h4>
+                <p class="score" id="scorePl1"></p>
+                <p class="rounds" id="roundsPl1"> 0 rounds </p>
+                <p class="score" id="scorePl2"></p>
+                <p class="rounds" id="roundsPl2"></p>
             </div>
         </div>
     </div>
@@ -44,10 +50,17 @@
         <input class="nameInput" id="nameForm2" type="text" required>
     </br></br></br>
     <button class="nameButton" id="btnForm2">Add both players</button>
-</form>
-<div class="diceContainer hidden">
-        <div class="roundPoints" id="roundScore">Round Points 0</div>
-        <section id="clickable">
+    </form>
+    <div class="diceContainer hidden">
+        <div class="roundPoints" id="roundScore">
+            <p id="roundScore">Round Points 0</p>
+        </div>
+        <div class="winContainer hidden" id="winContainer">
+            <h2 id="winnerName"></h2>
+            <p id="winnerStats"></p>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+        <section class="clickable" id="clickable">
             <div class="die one" id="die-1">
                 <div></div>
             </div>
@@ -83,8 +96,26 @@
             </div>
         </section>
     </div>
-    <div class="saveContainer hidden" id="saveBtn">
-        <div class="save">SAVE</div>
+    <div>
+        <div id="diceHistory" class="dice-history"></div>
+    </div>
+    <div class="saveContainer hidden" id="saveBtnContainer">
+        <div class="save" id="saveBtn">SAVE ROUND POINTS</div>
+    </div>
+    <canvas id="fireworksCanvas" class="hidden"></canvas>
+    <div class="game-container">
+        <button class="rules-button">Show Rules</button>
+        <div class="rules-container">
+            <h2>Game Rules</h2>
+            <ul>
+                <li>Rule 1: Player takes turns to roll the dice.</li>
+                <li>Rule 2: First to 100 points wins!</li>
+                <li>Rule 3: Each round, roll the dice and add points to your score.</li>
+                <li>Rule 4: You can choose to "freeze" your points, which adds your round score to your total points.</li>
+                <li>Rule 5: If you roll a 1, your round score resets to zero, and no points are added to your total.</li>
+                <li>Rule 6: Keep playing until you reach at least 100 points.</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

@@ -5,17 +5,8 @@
     outline: 0;
     box-sizing: border-box;
 }
-/* @font-face {
-    font-family: 'score-board';
-    src: url('../resources/fonts/ErbosDraco1StNbpRegular-99V5.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  } */
 body{
     padding: 5%;
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around; */
     background-color: pink;
 }
 .hidden {
@@ -26,9 +17,12 @@ body{
 }
 .nameContainer {
     position: absolute;
+    top:14%;
+    left: 11.2%;
 }
 .nameHeader{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 15px;
 }
 .currentNameHeader {
     font-size: 30px;
@@ -53,11 +47,8 @@ form {
     letter-spacing: 10px;
 }
 .nameInput {
-    /* width: 200px; */
-    /* height: 40px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* font-size: 25px; */
     font-weight: lighter;
     letter-spacing: 3px;
     text-align: center;
@@ -67,47 +58,146 @@ form {
     background-color: lightseagreen;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: white;
-    /* height: 40px; */
-    /* width: 58px; */
     transition-duration: 0.4s;
     padding: 5px 15px;
 }
-
 .nameButton, .nameInput{
     font-size: 24px;
-    
 }
-
 .nameButton:hover {
     background-color: rgb(21, 116, 111);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    /* height: 40px;
-    width: 58px; */
 }
 .alignCenter {
     text-align: center;
 }
 .diceContainer {
     display: flex;
-    /* left: 50%; */
 }
 .saveContainer {
+    position: fixed;
+    bottom: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    width: 100%;
 }
 .save {
     background-color: rgb(160, 245, 245);
-    border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 6px 0 #00a4a4, 0 6px 10px rgba(0, 0, 0, 0.2);
     padding: 0.5%;
     width: 8%;
     text-align: center;
     font-family: monospace;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    position: relative;
+    top: 0;
+    user-select: none;
 }
-.save:hover{
+.save:hover {
     background-color: rgb(3, 205, 205);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.save:active {
+    box-shadow: 0 2px 0 #008080, 0 2px 6px rgba(0, 0, 0, 0.2);
+    top: 4px;
+}
+#fireworksCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+.blur {
+    filter: blur(3px);
+    pointer-events: none;
+}
+.index {
+    z-index: 999;
+}
+.winContainer.visible {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(5, 236, 217);
+    padding: 6rem 10rem 6rem 10rem;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(249, 191, 0, 0.4);
+    text-align: center;
+    z-index: 1000;
+}
+.winContainer h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.winContainer button {
+    margin-top: 30px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: teal;
+    color: white;
+    cursor: pointer;
+}
+.game-container {
+    position: absolute;
+    display: inline-block;
+    top: 1%;
+    left: 1%;
+}
+
+.rules-button {
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rules-container {
+    position: absolute;
+    top: 0%;
+    left: 110%;
+    transform: translateX(-50%);
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+    z-index: 100;
+}
+
+.rules-container.visible {
+    display: block;
+}
+
+.rules-container h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.rules-container ul {
+    font-size: 16px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.rules-container li {
+    margin-bottom: 5px;
+}
+
+.game-container:hover .rules-container {
+    display: block;
 }

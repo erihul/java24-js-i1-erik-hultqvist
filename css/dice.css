@@ -88,22 +88,31 @@
 .six > :nth-child(5), .six > :last-child{
     align-self: flex-end;
 }
-.die:hover {
-    animation: tilt-n-move-shaking 0.15s infinite;
+
+#clickable{
+    width: 16%;
 }
-.die:active {
-    transform: scale(0.9) rotate(15deg);
-    transition: transform 0.1s ease;
-}
+
 @keyframes tilt-n-move-shaking {
     0% { transform: translate(0, 0) rotate(0deg); }
     25% { transform: translate(5px, 5px) rotate(5deg); }
-    50% { transform: translate(0, 0) rotate(0eg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
     75% { transform: translate(-5px, 5px) rotate(-5deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
-}
-
-#clickable{
-    /* border: 2px solid red; */
-    width: 16%;
-}
+  }
+  
+  @keyframes tilt-n-rotate-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(45deg); }
+    50% { transform: translate(0, 0) rotate(90deg); }
+    75% { transform: translate(-5px, 5px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(180deg); }
+  }
+  
+  .die-rolling {
+    animation: tilt-n-move-shaking 0.15s infinite;
+  }
+  
+  .die-rolling-rotate {
+    animation: tilt-n-rotate-shaking 0.20s infinite;
+  }
