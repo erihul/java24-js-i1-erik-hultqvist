@@ -8,6 +8,7 @@
 body{
     padding: 5%;
     background-color: pink;
+    user-select: none;
 }
 .hidden {
     display: none !important;
@@ -133,6 +134,7 @@ form {
     box-shadow: 0 0 30px rgba(249, 191, 0, 0.4);
     text-align: center;
     z-index: 1000;
+    user-select: none;
 }
 .winContainer h2 {
     font-size: 50px;
@@ -153,6 +155,7 @@ form {
     display: inline-block;
     top: 1%;
     left: 1%;
+    user-select: none;
 }
 
 .rules-button {
